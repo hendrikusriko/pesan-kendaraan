@@ -66,10 +66,7 @@
                                             <th>Nama kendaraan</th>
                                             <th>Nama driver</th>
                                             <th>Tanggal pinjam</th>
-                                            <th>Petugas acc 1</th>
-                                            <th>Petugas acc 2</th>
-                                            <th>Acc 1</th>
-                                            <th>Acc 2</th>
+                                            <th>Jumlah ACC</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -78,25 +75,17 @@
                                                 <td>{{ $item->vehicle->name }}</td>
                                                 <td>{{ $item->driver->name }}</td>
                                                 <td>{{ $item->order_date }}</td>
-                                                <td>{{ $item->staf_one }}</td>
-                                                <td>{{ $item->staf_two }}</td>
-                                                @if($item->acc_staf_one == 0)
+                                                @if($item->acc_mark == 0)
                                                     <td>
-                                                        <i class="fas fa-fw fa-times"></i>
+                                                        <i class="fas fa-fw fa-times"></i> <i class="fas fa-fw fa-times"></i>
                                                     </td>
-                                                @elseif($item->acc_staf_one == 1)
+                                                @elseif($item->acc_mark == 1)
                                                     <td>
                                                         <i class="fas fa-fw fa-check"></i>
                                                     </td>
-                                                @endif
-                                                
-                                                @if($item->acc_staf_two == 0)
+                                                @elseif($item->acc_mark == 2)
                                                     <td>
-                                                        <i class="fas fa-fw fa-times"></i>
-                                                    </td>
-                                                @elseif($item->acc_staf_two == 1)
-                                                    <td>
-                                                        <i class="fas fa-fw fa-check"></i>
+                                                        <i class="fas fa-fw fa-check"></i> <i class="fas fa-fw fa-check"></i>
                                                     </td>
                                                 @endif
                                             </tr>

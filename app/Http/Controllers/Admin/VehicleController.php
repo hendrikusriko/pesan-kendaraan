@@ -60,7 +60,7 @@ class VehicleController extends Controller
 
         Validator::make($request->all(), [
             'name' => 'required',
-            'police_number' => 'required',
+            'police_number' => 'required|unique:vehicle,police_number',
             'color' => 'required',
             'vehicle_type' => 'required',
             'ownership' => 'required',
@@ -96,7 +96,7 @@ class VehicleController extends Controller
 
         Validator::make($request->all(), [
             'name' => 'required',
-            'police_number' => 'required',
+            'police_number' => 'required|unique:vehicle,police_number,' . $id,
             'color' => 'required',
             'vehicle_type' => 'required',
             'ownership' => 'required',

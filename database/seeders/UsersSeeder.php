@@ -23,8 +23,26 @@ class UsersSeeder extends Seeder
                 'password' => bcrypt('123456'),
             ],
             [
-                'name' => 'User',
-                'email' => 'user@user.user',
+                'name' => 'jono',
+                'email' => 'jono@jono.jono',
+                'is_admin' => '0',
+                'password' => bcrypt('123456'),
+            ],
+            [
+                'name' => 'goku',
+                'email' => 'goku@goku.goku',
+                'is_admin' => '0',
+                'password' => bcrypt('123456'),
+            ],
+            [
+                'name' => 'gohan',
+                'email' => 'gohan@gohan.gohan',
+                'is_admin' => '0',
+                'password' => bcrypt('123456'),
+            ],
+            [
+                'name' => 'budi',
+                'email' => 'budi@budi.budi',
                 'is_admin' => '0',
                 'password' => bcrypt('123456'),
             ],
